@@ -1,6 +1,0 @@
-resources:
-- argo-app.yaml
-- cicd-app.yaml
-- dev-dev-app-ads-risk-scoring-solution-app.yaml
-- dev-dev-env-app.yaml
-- dev-stage-env-app.yaml

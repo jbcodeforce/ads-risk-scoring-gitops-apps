@@ -1,0 +1,13 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  creationTimestamp: null
+  name: dev-dev-app-ads-risk-scoring-solution-ads-risk-scoring-solution-binding
+  namespace: dev-cicd
+spec:
+  params:
+  - name: imageRepo
+    value: image-registry.openshift-image-registry.svc:5000/ibmcase/ads-risk-scoring
+  - name: tlsVerify
+    value: "false"
+status: {}

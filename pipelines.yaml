@@ -1,0 +1,29 @@
+config:
+  argocd:
+    namespace: openshift-gitops
+  pipelines:
+    name: ads-risk-cicd
+environments:
+- apps:
+  - name: app-ads-risk-scoring-solution
+    services:
+    - name: ads-risk-scoring-solution
+      pipelines:
+        integration:
+          bindings:
+          - ads-risk-dev-app-ads-risk-scoring-solution-ads-risk-scoring-solution-binding
+          - github-push-binding
+      source_url: https://github.com/jbcodeforce/ads-risk-scoring-solution.git
+      webhook:
+        secret:
+          name: webhook-secret-ads-risk-dev-ads-risk-scoring-solution
+          namespace: ads-risk-cicd
+  name: ads-risk-dev
+  pipelines:
+    integration:
+      bindings:
+      - github-push-binding
+      template: app-ci-template
+- name: ads-risk-stage
+gitops_url: https://github.com/jbcodeforce/ads-risk-scoring-gitops.git
+version: 1

@@ -1,0 +1,4 @@
+resources:
+- ads-risk-dev-environment.yaml
+- ads-risk-dev-rolebinding.yaml
+- argocd-admin.yaml

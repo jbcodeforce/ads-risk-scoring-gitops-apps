@@ -1,0 +1,3 @@
+resources:
+- ads-risk-stage-environment.yaml
+- argocd-admin.yaml

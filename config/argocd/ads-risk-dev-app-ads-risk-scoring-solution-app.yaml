@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: app-ads-risk-scoring-solution
+  name: ads-risk-dev-app-ads-risk-scoring-solution
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: ads-risk-dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: environments/ads-risk-dev/apps/app-ads-risk-scoring-solution/overlays
+    repoURL: https://github.com/jbcodeforce/ads-risk-scoring-gitops.git
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+status:
+  health: {}
+  summary: {}
+  sync:
+    comparedTo:
+      destination: {}
+      source:
+        repoURL: ""
+    status: ""

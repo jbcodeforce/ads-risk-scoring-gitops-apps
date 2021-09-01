@@ -1,5 +1,5 @@
 resources:
-- ads-risk-dev-app-ads-risk-scoring-solution-app.yaml
+- ads-risk-dev-app-ads-risk-scoring-app.yaml
 - ads-risk-dev-env-app.yaml
 - ads-risk-stage-env-app.yaml
 - argo-app.yaml
